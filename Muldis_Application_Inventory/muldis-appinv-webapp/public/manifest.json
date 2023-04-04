@@ -1,0 +1,10 @@
+{
+  "short_name": "Muldis Application Inventory (MULDIS-APPINV)",
+  "name": "Muldis Application Inventory (MULDIS-APPINV) - WEBAPP",
+  "icons": [
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#ffffff",
+  "background_color": "#000000"
+}
