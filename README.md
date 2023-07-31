@@ -11,13 +11,27 @@ contribute capabilities that don't already exist elsewhere.
 
 ## Muldis Application Inventory (MULDIS-APPINV)
 
-[Muldis_Application_Inventory](Muldis_Application_Inventory)
+MULDIS-APPINV is a simple web-based database application that empowers an
+organization to track and manage applications that they are developing,
+tracking details for each such as its product title, start date, and names
+of people in various roles; it supports listing, viewing, adding, editing,
+and removing product records.
 
-MULDIS-APPINV is a simple web-based database application that
-empowers an organization to track and manage applications that they are
-developing, tracking details for each such as its product title, start
-date, and names of people in various roles; it supports listing, viewing,
-adding, editing, and removing product records.
+MULDIS-APPINV has the 2 components DBMS and WEBAPP, such that the latter is
+what end users typically interact with directly using a generic web
+browser, and the former is a supporting service providing a RESTful API
+that the latter consumes.
+
+Each of DBMS and WEBAPP is abstract and can have multiple alternative
+concrete implementations, each one built with a different technology.
+
+### Muldis Application Inventory: DBMS: Nest (MULDIS-APPINV-DBMS-NEST)
+
+MULDIS-APPINV-DBMS-NEST is a concrete implementation of the abstract DBMS
+component of the abstract MULDIS-APPINV application.
+It is built in the TypeScript language using the NestJS framework.
+
+[Muldis_Application_Inventory_DBMS_Nest](Muldis_Application_Inventory_DBMS_Nest)
 
 Technologies used include:
 
@@ -25,7 +39,21 @@ Technologies used include:
 - Node.js (<https://nodejs.org>)
 - Nest.js (<https://nestjs.com>)
 - Express.js (<https://expressjs.com>)
-- React.js (<https://react.dev>)
 - JSON (<https://json.org>)
 - REST APIs / Swagger
-- MERN stack (modified)
+
+### Muldis Application Inventory: WEBAPP: React (MULDIS-APPINV-WEBAPP-REACT)
+
+MULDIS-APPINV-WEBAPP-REACT is a concrete implementation of the abstract WEBAPP
+component of the abstract MULDIS-APPINV application.
+It is built in the TypeScript language using the React web library.
+
+[Muldis_Application_Inventory_WEBAPP_React](Muldis_Application_Inventory_WEBAPP_React)
+
+Technologies used include:
+
+- TypeScript (<https://typescriptlang.org>)
+- Node.js (<https://nodejs.org>)
+- React.js (<https://react.dev>)
+- JSON (<https://json.org>)
+- REST APIs

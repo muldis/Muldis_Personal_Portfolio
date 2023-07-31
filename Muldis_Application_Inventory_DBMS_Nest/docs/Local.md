@@ -1,10 +1,11 @@
-# MULDIS-APPINV - Local Deployment and Testing
+# MULDIS-APPINV-DBMS-NEST - Local Deployment and Testing
 
 This document consists of multiple parts; for a directory to all of the
 parts, see [Overview](../README.md).
 
-This part of the document explains how to install and run MULDIS-APPINV on a local
-developer machine, which is also a basis that they can develop it further.
+This part of the document explains how to install and run
+MULDIS-APPINV-DBMS-NEST on a local developer machine,
+which is also a basis that they can develop it further.
 
 It also talks about how to run the automated tests locally.
 
@@ -44,23 +45,17 @@ you would use for most setup or runtime tasks afterwards.
 Obtain the latest source code for this project from its current repository.
 You can use a `git` client to clone/pull it, or GitHub can privide a zip file.
 
-All shell command sequences given here to setup or run MULDIS-APPINV itself assume
+All shell command sequences given here to setup or run
+MULDIS-APPINV-DBMS-NEST itself assume
 your starting current working directory is the root level of your clone of
 this project's source folder, unless otherwise stated.
 
 ### Node Package Manager
 
-Before the first run of the MULDIS-APPINV-DBMS server, in a shell session, first
-`cd` into the `muldis-appinv-dbms` folder and run the following command, which
-will fetch/install the server's additional JavaScript library dependencies:
-
-```
-    npm install
-```
-
-Before the first run of the MULDIS-APPINV-WEBAPP server, in a shell session, first
-`cd` into the `muldis-appinv-webapp` folder and run the following command, which
-will fetch/install the server's additional JavaScript library dependencies:
+Before the first run of the MULDIS-APPINV-DBMS-NEST server, in a shell session,
+first `cd` into the `Muldis_Application_Inventory_DBMS_Nest` folder
+and run the following command, which will fetch/install
+the server's additional JavaScript library dependencies:
 
 ```
     npm install
@@ -68,26 +63,25 @@ will fetch/install the server's additional JavaScript library dependencies:
 
 ### Data File
 
-MULDIS-APPINV-DBMS uses a JSON-formatted plain text file to keep its application
+MULDIS-APPINV-DBMS-NEST uses a JSON-formatted plain text file to keep its application
 data in.  You need to supply such a valid file in a file system location of
 your choice and tell the application where it is.
 
 An example data file `data_seed_for_copying.json` is provided in the
-`muldis-appinv-dbms` folder of the project.  You should not specify this file
+`Muldis_Application_Inventory_DBMS_Nest` folder of the project.  You should not specify this file
 itself as your data file, but you can specify a duplicate of it.
 
 If you want to use an "empty" data file, then you just need one that
 defines an empty JSON array, so its entire content is just `[]`.
 
 The following instructions assume you named your data file `data.json` and
-located it in the same `muldis-appinv-dbms` folder.
+located it in the same `Muldis_Application_Inventory_DBMS_Nest` folder.
 
-## Running the Servers
+## Running the Server
 
-### MULDIS-APPINV-DBMS
-
-To start the MULDIS-APPINV-DBMS server, in a shell session, first `cd` into the
-`muldis-appinv-dbms` folder and run either of the following commands,
+To start the MULDIS-APPINV-DBMS-NEST server, in a shell session,
+first `cd` into the `Muldis_Application_Inventory_DBMS_Nest` folder
+and run either of the following commands,
 adjusting for your choices of host or port data file path:
 
 ```
@@ -130,74 +124,33 @@ valid, and the API invocation is also valid, any API invocation that is
 a create/modify/remove request will rewrite the file.  You can manually
 edit the file between API calls, including to fix it if it is damaged.
 
-We assume only a single instance of MULDIS-APPINV-DBMS is running at a time for
+We assume only a single instance of MULDIS-APPINV-DBMS-NEST is running at a time for
 any given data file, and that the server serializes handling of API calls;
 it is not designed to handle concurrent access of multiple instances or
 API calls to the same data file at once; data loss may occur in that case.
 
-The `HOST` and `PORT` determine what the MULDIS-APPINV-DBMS server will listen on;
-if either is not specified it will default to `127.0.0.1` (`localhost`) and
-`80` respectively.
+The `HOST` and `PORT` determine what the MULDIS-APPINV-DBMS-NEST
+server will listen on; if either is not specified it will default to
+`127.0.0.1` (`localhost`) and `80` respectively.
+Make sure its not the same as any other MULDIS-APPINV component.
 
 To stop the server, hit CTRL-C in the same shell session.
 
-### MULDIS-APPINV-WEBAPP
+## Using the MULDIS-APPINV-DBMS-NEST Application
 
-To start the MULDIS-APPINV-WEBAPP server, in a shell session, first `cd` into the
-`muldis-appinv-webapp` folder and run either of the following commands,
-adjusting for your choices of host or port:
-
-```
-    REACT_APP_DBMS_HOST=localhost REACT_APP_DBMS_PORT=3000 PORT=8080 npm start
-```
-
-Or:
-
-```
-    REACT_APP_DBMS_HOST=localhost REACT_APP_DBMS_PORT=3000 npm run build
-    PORT=8080 npm run serve
-```
-
-The first option of 1 command is easier when one is actively developing
-this project.  The server is running in a mode that watches for changes to
-the source code files, automatically reloads them if it sees any changed,
-and provides some helpful diagnostics when some problems occur.
-
-The second option of 2 commands is better for a production or
-production-like situation.  The first command only needs to be run when
-there are changes made to the project.  The second command will run the
-server produced by the first command and will not auto-reload on changes.
-
-Any environment variable can be set inline like shown here,
-or by setting it in a `.env` file.
-
-The MULDIS-APPINV-WEBAPP server will listen on localhost port 8080, or whatever
-alternate `PORT` you choose.  Make sure its not the same as MULDIS-APPINV-DBMS.
-
-MULDIS-APPINV-WEBAPP will invoke MULDIS-APPINV-DBMS using the latter's location specified by
-`REACT_APP_DBMS_HOST` and `REACT_APP_DBMS_PORT`.
-
-To stop the server, hit CTRL-C in the same shell session.
-
-## Using the MULDIS-APPINV Application
-
-Visit <http://localhost:8080> in a web browser while both servers are
-running to actually use the application as a regular end user.
-
-Visit <http://localhost:3000/api/api-docs> to view the REST API
-documentation or try out invoking it directly.
+Visit <http://localhost:3000/api/api-docs> in a web browser,
+to view the REST API documentation or try out invoking it directly.
 
 ## Running the Automated Tests
 
-Each of MULDIS-APPINV-DBMS and MULDIS-APPINV-WEBAPP includes an automated test suite.
+MULDIS-APPINV-DBMS-NEST includes an automated test suite.
 
 The following assumes that `npm install` has been run, but that the
 applications are not currently running.
 
-### MULDIS-APPINV-DBMS
-
-To run the MULDIS-APPINV-DBMS automated tests, in a shell session, first `cd` into
-the `muldis-appinv-dbms` folder and run any or all of the following options...
+To run the MULDIS-APPINV-DBMS-NEST automated tests, in a shell session,
+first `cd` into the `Muldis_Application_Inventory_DBMS_Nest` folder
+and run any or all of the following options...
 
 For unit tests:
 
@@ -218,12 +171,3 @@ DATA_FILE_PATH=data.json npm run test:cov
 ```
 
 You should see the output of the tests in the terminal.
-
-### MULDIS-APPINV-WEBAPP
-
-To run the MULDIS-APPINV-WEBAPP automated tests, in a shell session, first `cd` into
-the `muldis-appinv-webapp` folder and run the following:
-
-```
-npm test
-```
