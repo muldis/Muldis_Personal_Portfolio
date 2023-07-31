@@ -1,7 +1,7 @@
 {
-  "name": "muldis-appinv-webapp",
+  "name": "Muldis_Application_Inventory_WEBAPP_React",
   "version": "0.0.1",
-  "description": "Muldis Application Inventory (MULDIS-APPINV) - WEBAPP",
+  "description": "Muldis Application Inventory: WEBAPP: React (MULDIS-APPINV-WEBAPP-REACT)",
   "author": "Darren Duncan",
   "private": true,
   "license": "Apache-2.0",

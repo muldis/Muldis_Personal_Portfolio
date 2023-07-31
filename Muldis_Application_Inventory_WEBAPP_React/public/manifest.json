@@ -1,6 +1,6 @@
 {
-  "short_name": "Muldis Application Inventory (MULDIS-APPINV)",
-  "name": "Muldis Application Inventory (MULDIS-APPINV) - WEBAPP",
+  "short_name": "Muldis Application Inventory: WEBAPP: React (MULDIS-APPINV-WEBAPP-REACT)",
+  "name": "Muldis Application Inventory: WEBAPP: React (MULDIS-APPINV-WEBAPP-REACT)",
   "icons": [
   ],
   "start_url": ".",

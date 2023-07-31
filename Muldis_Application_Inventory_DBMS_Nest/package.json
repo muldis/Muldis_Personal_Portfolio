@@ -1,7 +1,7 @@
 {
-  "name": "muldis-appinv-dbms",
+  "name": "Muldis_Application_Inventory_DBMS_Nest",
   "version": "0.0.1",
-  "description": "Muldis Application Inventory (MULDIS-APPINV) - DBMS",
+  "description": "Muldis Application Inventory: DBMS: Nest (MULDIS-APPINV-DBMS-NEST)",
   "author": "Darren Duncan",
   "private": true,
   "license": "Apache-2.0",

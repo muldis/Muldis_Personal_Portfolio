@@ -19,7 +19,7 @@ async function bootstrap() {
   app.setGlobalPrefix('/api');
 
   // Widening the allowed origins from the default is required in order for
-  // our client MULDIS-APPINV-WEBAPP on port 8080 to not be denied access with
+  // our client WEBAPP component on another port to not be denied access with
   // "...is not allowed by access-control-allow-origin. status code 200".
   app.use((req: Request, res: Response, next: NextFunction) => {
     res.header('Access-Control-Allow-Origin', '*');
@@ -37,9 +37,9 @@ async function bootstrap() {
   //    /api/api-docs-json
   //    /api/api-docs-yaml
   const config = new DocumentBuilder()
-    .setTitle('muldis-appinv-dbms')
+    .setTitle('Muldis_Application_Inventory_DBMS_Nest')
     .setVersion('0.0.1')
-    .setDescription('Muldis Application Inventory (MULDIS-APPINV) - DBMS')
+    .setDescription('Muldis Application Inventory: DBMS: Nest (MULDIS-APPINV-DBMS-NEST)')
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('/api/api-docs', app, document);
