@@ -1,4 +1,4 @@
-# MULDIS-APPINV-WEBAPP-REACT - Assumptions
+# MULDIS-APPINV-WEBAPP-CRA - Assumptions
 
 This document consists of multiple parts; for a directory to all of the
 parts, see [Overview](../README.md).

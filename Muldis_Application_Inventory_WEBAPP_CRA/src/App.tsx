@@ -564,7 +564,7 @@ function DeleteOneProductPage() {
 function App() {
   return (
     <BrowserRouter>
-      <h1>Muldis Application Inventory: WEBAPP: React (MULDIS-APPINV-WEBAPP-REACT)</h1>
+      <h1>Muldis Application Inventory: WEBAPP: CRA (MULDIS-APPINV-WEBAPP-CRA)</h1>
       <Routes>
         <Route path="/create" element={<CreateOneProductPage />} />
         <Route path="/" element={<ViewAllProductsPage />} />

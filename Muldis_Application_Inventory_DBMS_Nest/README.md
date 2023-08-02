@@ -3,7 +3,8 @@
 This document describes MULDIS-APPINV-DBMS-NEST,
 which is a concrete implementation of the abstract DBMS
 component of the abstract MULDIS-APPINV application.
-It is built in the TypeScript language using the NestJS framework.
+It is built in the TypeScript language using the Nest framework
+using the Express framework.
 
 MULDIS-APPINV is a simple web-based database application that empowers an
 organization to track and manage applications that they are developing,

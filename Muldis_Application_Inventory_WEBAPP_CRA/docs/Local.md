@@ -1,10 +1,10 @@
-# MULDIS-APPINV-WEBAPP-REACT - Local Deployment and Testing
+# MULDIS-APPINV-WEBAPP-CRA - Local Deployment and Testing
 
 This document consists of multiple parts; for a directory to all of the
 parts, see [Overview](../README.md).
 
 This part of the document explains how to install and run
-MULDIS-APPINV-WEBAPP-REACT on a local developer machine,
+MULDIS-APPINV-WEBAPP-CRA on a local developer machine,
 which is also a basis that they can develop it further.
 
 It also talks about how to run the automated tests locally.
@@ -46,14 +46,14 @@ Obtain the latest source code for this project from its current repository.
 You can use a `git` client to clone/pull it, or GitHub can privide a zip file.
 
 All shell command sequences given here to setup or run
-MULDIS-APPINV-WEBAPP-REACT itself assume
+MULDIS-APPINV-WEBAPP-CRA itself assume
 your starting current working directory is the root level of your clone of
 this project's source folder, unless otherwise stated.
 
 ### Node Package Manager
 
-Before the first run of the MULDIS-APPINV-WEBAPP-REACT server, in a shell session,
-first `cd` into the `Muldis_Application_Inventory_WEBAPP_React` folder
+Before the first run of the MULDIS-APPINV-WEBAPP-CRA server, in a shell session,
+first `cd` into the `Muldis_Application_Inventory_WEBAPP_CRA` folder
 and run the following command, which will fetch/install
 the server's additional JavaScript library dependencies:
 
@@ -63,8 +63,8 @@ the server's additional JavaScript library dependencies:
 
 ## Running the Server
 
-To start the MULDIS-APPINV-WEBAPP-REACT server, in a shell session,
-first `cd` into the `Muldis_Application_Inventory_WEBAPP_React` folder
+To start the MULDIS-APPINV-WEBAPP-CRA server, in a shell session,
+first `cd` into the `Muldis_Application_Inventory_WEBAPP_CRA` folder
 and run either of the following commands,
 adjusting for your choices of host or port:
 
@@ -92,16 +92,16 @@ server produced by the first command and will not auto-reload on changes.
 Any environment variable can be set inline like shown here,
 or by setting it in a `.env` file.
 
-The MULDIS-APPINV-WEBAPP-REACT server will listen on localhost port 8080,
+The MULDIS-APPINV-WEBAPP-CRA server will listen on localhost port 8080,
 or whatever alternate `PORT` you choose.
 Make sure its not the same as any other MULDIS-APPINV component.
 
-MULDIS-APPINV-WEBAPP-REACT will invoke a DBMS component using the latter's
+MULDIS-APPINV-WEBAPP-CRA will invoke a DBMS component using the latter's
 location specified by `REACT_APP_DBMS_HOST` and `REACT_APP_DBMS_PORT`.
 
 To stop the server, hit CTRL-C in the same shell session.
 
-## Using the MULDIS-APPINV-WEBAPP-REACT Application
+## Using the MULDIS-APPINV-WEBAPP-CRA Application
 
 Visit <http://localhost:8080> in a web browser,
 while both this server and a referred-to DBMS server are running,
@@ -109,13 +109,13 @@ to actually use the application as a regular end user.
 
 ## Running the Automated Tests
 
-MULDIS-APPINV-WEBAPP-REACT includes an automated test suite.
+MULDIS-APPINV-WEBAPP-CRA includes an automated test suite.
 
 The following assumes that `npm install` has been run, but that the
 applications are not currently running.
 
-To run the MULDIS-APPINV-WEBAPP-REACT automated tests, in a shell session,
-first `cd` into the `Muldis_Application_Inventory_WEBAPP_React` folder
+To run the MULDIS-APPINV-WEBAPP-CRA automated tests, in a shell session,
+first `cd` into the `Muldis_Application_Inventory_WEBAPP_CRA` folder
 and run the following:
 
 ```

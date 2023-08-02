@@ -17,8 +17,12 @@ in a server-side Node.js <https://nodejs.org> environment.
 It is written against the ECMAScript standard version 12 (2021) so you
 should have a fairly modern Node.js.
 
-MULDIS-APPINV-DBMS-NEST is built around the NestJS framework, so the
-latter's main documentation site <https://docs.nestjs.com> can be used to
+MULDIS-APPINV-DBMS-NEST is built around the Nest framework, so the
+latter's main documentation <https://nestjs.com> can be used to
+understand its architecture and how to build and run it at a generic level.
+
+MULDIS-APPINV-DBMS-NEST is also built around the Express framework, so the
+latter's main documentation <https://expressjs.com> can be used to
 understand its architecture and how to build and run it at a generic level.
 
 This current document will focus on the parts that are the most interesting

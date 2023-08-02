@@ -29,7 +29,8 @@ concrete implementations, each one built with a different technology.
 
 MULDIS-APPINV-DBMS-NEST is a concrete implementation of the abstract DBMS
 component of the abstract MULDIS-APPINV application.
-It is built in the TypeScript language using the NestJS framework.
+It is built in the TypeScript language using the Nest framework
+using the Express framework.
 
 [Muldis_Application_Inventory_DBMS_Nest](Muldis_Application_Inventory_DBMS_Nest)
 
@@ -37,23 +38,25 @@ Technologies used include:
 
 - TypeScript (<https://typescriptlang.org>)
 - Node.js (<https://nodejs.org>)
-- Nest.js (<https://nestjs.com>)
-- Express.js (<https://expressjs.com>)
+- Nest (<https://nestjs.com>)
+- Express (<https://expressjs.com>)
 - JSON (<https://json.org>)
 - REST APIs / Swagger
 
-### Muldis Application Inventory: WEBAPP: React (MULDIS-APPINV-WEBAPP-REACT)
+### Muldis Application Inventory: WEBAPP: CRA (MULDIS-APPINV-WEBAPP-CRA)
 
-MULDIS-APPINV-WEBAPP-REACT is a concrete implementation of the abstract WEBAPP
+MULDIS-APPINV-WEBAPP-CRA is a concrete implementation of the abstract WEBAPP
 component of the abstract MULDIS-APPINV application.
-It is built in the TypeScript language using the React web library.
+It is built in the TypeScript language using the Create React App framework
+using the React web library.
 
-[Muldis_Application_Inventory_WEBAPP_React](Muldis_Application_Inventory_WEBAPP_React)
+[Muldis_Application_Inventory_WEBAPP_CRA](Muldis_Application_Inventory_WEBAPP_CRA)
 
 Technologies used include:
 
 - TypeScript (<https://typescriptlang.org>)
 - Node.js (<https://nodejs.org>)
-- React.js (<https://react.dev>)
+- Create React App (<https://create-react-app.dev>)
+- React (<https://react.dev>)
 - JSON (<https://json.org>)
 - REST APIs

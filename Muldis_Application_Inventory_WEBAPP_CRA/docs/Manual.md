@@ -1,12 +1,12 @@
-# MULDIS-APPINV-WEBAPP-REACT - End User Manual
+# MULDIS-APPINV-WEBAPP-CRA - End User Manual
 
 This document consists of multiple parts; for a directory to all of the
 parts, see [Overview](../README.md).
 
 This part of the document explains what regular end users, who are simply
-using an already deployed instance of MULDIS-APPINV-WEBAPP-REACT, need to know.
+using an already deployed instance of MULDIS-APPINV-WEBAPP-CRA, need to know.
 
-MULDIS-APPINV-WEBAPP-REACT is a simple web-based database application that
+MULDIS-APPINV-WEBAPP-CRA is a simple web-based database application that
 empowers an organization to track and manage applications that they are
 developing, tracking details for each such as its product title, start
 date, and names of people in various roles; it supports listing, viewing,
