@@ -94,7 +94,7 @@ export class Products_Service {
       data_file_as_Text = JSON.stringify(products, null, 2);
     }
     catch (e) {
-      const msg: string = 'Products_Service.read_data_file():'
+      const msg: string = 'Products_Service.write_data_file():'
         + ' failure to serialize data file text as JSON to "' + data_file_path + '"'
         + ': ' + e;
       console.log(msg);
@@ -104,7 +104,7 @@ export class Products_Service {
       fs.writeFileSync(data_file_path, data_file_as_Text, 'utf8');
     }
     catch (e) {
-      const msg: string = 'Products_Service.read_data_file():'
+      const msg: string = 'Products_Service.write_data_file():'
         + ' failure to write data file as text to "' + data_file_path + '"'
         + ': ' + e;
       console.log(msg);
