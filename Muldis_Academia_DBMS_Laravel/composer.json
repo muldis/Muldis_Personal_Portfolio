@@ -1,9 +1,9 @@
 {
-    "name": "laravel/laravel",
+    "name": "Muldis_Academia_DBMS_Laravel",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
+    "description": "Muldis Academia: DBMS: Laravel (MULDIS-ACAD-DBMS-LARA)",
     "keywords": ["laravel", "framework"],
-    "license": "MIT",
+    "license": "Apache-2.0",
     "require": {
         "php": "^8.1",
         "guzzlehttp/guzzle": "^7.2",
