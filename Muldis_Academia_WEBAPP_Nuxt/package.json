@@ -1,6 +1,10 @@
 {
-  "name": "nuxt-app",
+  "name": "Muldis_Academia_WEBAPP_Nuxt",
+  "version": "0.0.1",
+  "description": "Muldis Academia: WEBAPP: Nuxt (MULDIS-ACAD-WEBAPP-NUXT)",
+  "author": "Darren Duncan",
   "private": true,
+  "license": "Apache-2.0",
   "type": "module",
   "scripts": {
     "build": "nuxt build",
