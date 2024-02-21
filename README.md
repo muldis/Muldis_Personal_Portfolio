@@ -58,5 +58,51 @@ Technologies used include:
 - Node.js (<https://nodejs.org>)
 - Create React App (<https://create-react-app.dev>)
 - React (<https://react.dev>)
-- JSON (<https://json.org>)
+- REST APIs
+
+## Muldis Academia (MULDIS-ACAD)
+
+MULDIS-ACAD is a simple web-based database application that empowers an
+academic organization to manage student data.
+
+MULDIS-ACAD has the 2 components DBMS and WEBAPP, such that the latter is
+what end users typically interact with directly using a generic web
+browser, and the former is a supporting service providing a RESTful API
+that the latter consumes.
+
+Each of DBMS and WEBAPP is abstract and can have multiple alternative
+concrete implementations, each one built with a different technology.
+
+### Muldis Academia: DBMS: Laravel (MULDIS-ACAD-DBMS-LARA)
+
+This document describes MULDIS-ACAD-DBMS-LARA,
+which is a concrete implementation of the abstract DBMS
+component of the abstract MULDIS-ACAD application.
+It is built in the PHP language using the Laravel web framework.
+
+[Muldis_Academia_DBMS_Laravel](Muldis_Academia_DBMS_Laravel)
+
+Technologies used include:
+
+- PHP (<https://php.net>)
+- Laravel (<https://laravel.com>)
+- Eloquent (<https://laravel.com/docs/10.x/eloquent>)
+- MySQL (<https://mysql.com>)
+- REST APIs
+
+### Muldis Academia: WEBAPP: NUXT (MULDIS-ACAD-WEBAPP-NUXT)
+
+This document describes MULDIS-ACAD-WEBAPP-NUXT,
+which is a concrete implementation of the abstract WEBAPP
+component of the abstract MULDIS-ACAD application.
+It is built in the TypeScript language using the Nuxt and Vue web frameworks.
+
+[Muldis_Academia_WEBAPP_Nuxt](Muldis_Academia_WEBAPP_Nuxt)
+
+Technologies used include:
+
+- TypeScript (<https://typescriptlang.org>)
+- Node.js (<https://nodejs.org>)
+- Nuxt (<https://nuxt.com>)
+- Vue (<https://vuejs.org>)
 - REST APIs
