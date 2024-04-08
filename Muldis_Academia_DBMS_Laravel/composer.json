@@ -1,5 +1,5 @@
 {
-    "name": "Muldis_Academia_DBMS_Laravel",
+    "name": "muldis/muldis_academia_dbms_laravel",
     "type": "project",
     "description": "Muldis Academia: DBMS: Laravel (MULDIS-ACAD-DBMS-LARA)",
     "keywords": ["laravel", "framework"],
